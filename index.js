@@ -15,6 +15,22 @@ convert string to an array
   else return false 
 */
 
+// CODE SOLUTION
+function isPalindrome(word) {
+  let newStringArray = word.split('');
+  let reversedArray = newStringArray.reverse();
+  let reversedString = reversedArray.join('');
+  
+  if(word === reversedString){
+    return true;
+  }
+  else{
+    return false;
+  }
+  
+  }
+  console.log(isPalindrome("abb"))
+
 
 /*
   Add written explanation of your solution here
@@ -44,19 +60,3 @@ if (require.main === module) {
 
 module.exports = isPalindrome;
 
-// CODE SOLUTION
-
-function isPalindrome(word) {
-let newStringArray = word.split('');
-let reversedArray = newStringArray.reverse();
-let reversedString = reversedArray.join('');
-
-if(word === reversedString){
-  return true;
-}
-else{
-  return false;
-}
-
-}
-console.log(isPalindrome("abb"))
